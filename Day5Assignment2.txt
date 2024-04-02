@@ -1,0 +1,85 @@
+Classes and Objects
+1. a) Create a class to hold information about books. Write functions to set and display information about the book .						                                Data members  :  Title , Author , cost , no_of_books
+b) Create a set of instances of the above class and initialize the members of the class
+c)  Select a title, and no_of books from command line .Find whether the book exists, if so whether the no_of_books are sufficient and if so indicate the total cost the books.
+
+Make use of constructors in the program
+Take Title and Author as String
+
+
+Inheritance
+
+add notes
+
+2. Given the class
+abstract class AbstractString
+{
+String str;
+	public:
+	abstract void display ( ) ;
+	……….
+};
+Derive classes UpperString and LowerString from AbstractString. Implement display(  ) function to print the characters in the appropriate upper or lower cases.
+	 Have a menu driven program allowing the user to enter the choice and display the characters     in  the  appropriate case .
+
+3. Create a class Medicine to represent a drug manufactured by a pharmaceutical company. Provide a function label in this class to print Name and address of the company. Derive Tablet, Syrup and Ointment classes from the Medicine class. Override the label function in each of these classes to print additional information suitable to the type of medicine. For example, in case of tablets, it could be “store in a cool dry place”, in case of ointment it could be “for external use only” etc.
+
+Create a class TestMedicine with a main function to do the following:
+a. Declare an array of Medicine references of size 10
+b. Create a medicine object of the type as decided by a randomly generated integer in the range 1 to 3.
+c. Check the polymorphic behavior of the label method.
+
+4. Create a class called point with data members to represent the x and y coordinates and have a function to display the coordinates. Derive a class called Circle from Point with a data member to represent the radius. Have a function called area() to calculate the area of the circle and also display the coordinates. Derive a class called Cylinder from Circle with a data member to represent the height of the Cylinder. Have a function called volume() to calculate the volume of the Cylinder .
+
+5. Extend the behavior of eg 3 to illustrate a jagged array of Medicine references with the first row representing different types of tablets, the second row representing different types of syrups and the third row illustrating different types of ointments.
+
+Provide user interfaces to help the customers 
+a) Check on the repository of medicines available at the medical shop. 
+b) Check on the availability of a particular tablet/syrup/ointment they require
+
+
+
+6. Create an abstract class Compartment to represent a rail coach. Provide a abstract  function notice in this class. Derive FirstClass, Ladies, General, Luggage classes from the compartment class. Override the notice function in each of them to print notice suitable to the type of the compartment.
+     All these classes should be created in a separate package named javass.intro3.prg1
+     Create a class TestCompartment in a different directory. Write main function to do the following:
+a. Declare an array of Compartment pointers of size 10.
+b. Create a compartment of a type as decided by a randomly generated integer in 
+    the range 1 to 4.
+c. Check the polymorphic behavior of the notice method.
+
+7. Create an interface called Record with the functions called SetRecord, DisplayRecord and SearchRecord.Create a class called StudentRecord that implements the interface.The class should maintain a record of all the students comprising of the StudentName, StudentCourseName , StudentMarks.Define the functions of the interface appropriately. The program should accept a coursename as a command line argument and within the SearchRecord function, the names of all students belonging to that course should be displayed along with their marks. Also display the name of the student with the highest score.
+
+8. a) Construct a package called PersonDetails .Define an interface called Record . Have a function called displaydetails() in it .Now have a class called Person which implements Record interface consisting of the following data members String name; int age; Implement the displaydetails() function appropriately.
+     b) Create another package called EmpDetails and have a class called Employee being derived from Person class.Let id , salary be its data members . Override the displaydetails() function and also invoke the overridden base 
+     function within the derived class.
+
+a) Illustrate the dynamic polymorphism behavior of the application
+
+9. a) Create a package called GeometricFactoryPack.Have an interface called Factory which has a function called FigureType that takes a choice from the user about the Figure to be drawn(i.e. either CurvedFactory or StraightFactory). Create  classes called CurvedFactory and StraightFactory which are responsible for drawing their respective Geometric figures by using its subpackage entities
+
+b) Create a subpackage called GeometricPack. Have an interface called Figure with a draw function in it. Create classes called Square, Rectangle, Circle and Ellipse implementing the Figure interface method called draw.   
+
+c) If the user’s choice into FigureType function is 1 , it should draw CurvedFactory and if user’s choice is 2,it should draw StraightFactory.
+
+b) Illustrate dynamic polymorphism behavior in the application.
+
+
+
+10. Accept an Alphabet from user using Appropriate I/O Stream.
+
+a. If user types either of A, E, I, O, U then raise Vowel Exception
+b. If user Types X then raise Exit exception
+c. Otherwise print the alphabet on Screen
+
+11. Accept a string as a command line argument. Extract each character from the string and store it into a char array of a defined size. If the size of the char array is lesser than the actual size of the source, then writing the characters of the string into the char array results in an exception. Handle this exception and report an appropriate message to the user.
+
+12. The file Vehicle.java is a simple definition of a Vehicle class with get_speed and set_speed as its member functions.
+a. Create two other classes for particular vehicle types (trucks, submarines) that extend the Vehicle class to include fields and methods appropriate to the particular type of vehicle.
+b. In the new classes you define, override the set_speed() method so that an exception is raised if the speed is set to a value above a threshold of your choosing. You should do this by creating a new user exception class for reporting that a speed limit violation has occurred. The versions of set_speed() in the new vehicle classes that you created should throw this kind of exception.
+c. Create an array of instances of the subclasses to represent a collection of vehicles.
+d. Override the method called get_speed() which prints out the speed of each subclass object.
+e. Write a method, which displays the details of the vehicle with the highest speed.
+Use the concept of packages
+a. Let Vehicle be defined in a package named VehiclePack
+b. Let the subclasses be defined in the subpackage of VehiclePack called SubVehiclePack
+c. Let the entry point i.e CMain class be in a package called EntryPack
